@@ -1,66 +1,48 @@
 # Phase 2 Project
 
-Another module down--you're almost half way there!
+# Overview
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+The aim of this project was to analyse 'kc_house_data.csv' and align it with 'column_names.md' to predict some of the key features of what makes a house more valuable.
+The main question explored in this project is:
+What are the primary factors influencing housing prices in Kings County?
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+The focus was on providing actionable insights for a real estate agency to assist homeowners in buying or selling homes.
 
-## Project Overview
+# Key Findings
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+Influential Features
+Square Feet of Living Space (sqft_living): Larger living spaces significantly increase house prices.
+Waterfront: Waterfront properties command higher prices.
+Views: Better views are associated with higher prices.
+Bathrooms : More bathrooms contribute to higher prices.
+Bedrooms: A higher number of bedrooms slightly decreases the price.
 
-### The Data
+# Model Performance and Validation
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+R-squared and Adjusted R-squared: The model achieved an adjusted R-squared of 0.523, indicating a moderate level of fit.
+K-Fold Cross-Validation: To validate the model, K-fold cross-validation was employed, ensuring that the model's findings were consistent and not overly dependent on any particular subset of the data.
+Mean Squared Error (MSE): The MSEs for both the training and testing datasets were very close, suggesting that the model generalizes well to new data.
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+# Limitations and Issues
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+Multicollinearity: Indicated by a high condition number, multicollinearity among predictors could be distorting coefficient interpretations.
+Statistical Significance: Some features showed no significant impact on prices.
+Residual Analysis: Suggested the need for checking assumptions like normality of residuals and homoscedasticity.
+Methodology
+The Ordinary Least Squares (OLS) regression was the primary analytical tool. Model validation included K-fold cross-validation and MSE comparison, which revealed consistent performance across training and testing phases.
 
-### Business Problem
+Reflecting on the Project: With the benefit of hindsight, I recognize there were valuable lessons and areas of knowledge that I've only recently come to fully understand. I am eager to apply these insights in future endeavors to enhance both the process and the outcomes.
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+# Recommendations
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+Focus on Renovations with High ROI: Advise homeowners to invest in expanding living space and upgrading bathrooms.
+Emphasise high-value areas: Emphasize properties' waterfront and view attributes in marketing campaigns.
 
-## Deliverables
+# Conclusion
 
-There are three deliverables for this project:
+While the model identified key influencing features, addressing multicollinearity and other limitations is essential. Future iterations should include more nuanced modeling approaches and continuous validation to enhance prediction accuracy and reliability.
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
-
-### Key Points
-
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
-
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
-
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
-
-## Getting Started
-
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
-
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
-
-## Project Submission and Review
-
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
-
-## Summary
-
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
+The files included in this repositry include:
+data.ipynb - Jupyter Notebook
+Predicting House Prices in King's County.mp4
+Presentation.pdf
